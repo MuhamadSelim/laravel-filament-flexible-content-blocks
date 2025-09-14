@@ -12,7 +12,7 @@
 
             @if ($intro)
                 <div
-                     class="w-full md:w-2/3 text-lg md:text-xl @if ($hasHeroImage()) text-white @endif [&_a]:underline hover:[&_a]:no-underline">
+                     class="w-full md:w-2/3 text-lg md:text-xl @if ($hasHeroImage()) text-white @endif [&_a]:underline [&_a]:hover:no-underline">
                     {!! Statikbe\FilamentFlexibleContentBlocks\FilamentFlexibleContentBlocks::replaceParameters($intro) !!}
                 </div>
             @endif
