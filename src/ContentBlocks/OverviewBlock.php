@@ -2,8 +2,8 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\ContentBlocks;
 
+use Filament\Schemas\Components\Grid;
 use Closure;
-use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Collection;

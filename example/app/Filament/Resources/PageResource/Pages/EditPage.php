@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\FlexiblePageResource\Pages;
 
+use Filament\Actions\DeleteAction;
 use App\Filament\Resources\PageResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
@@ -13,7 +14,7 @@ class EditPage extends EditRecord
     protected function getActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
+            DeleteAction::make(),
         ];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Actions;
 
-use Filament\Actions\LocaleSwitcher;
+use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use Filament\Pages\Page;
 
 /**

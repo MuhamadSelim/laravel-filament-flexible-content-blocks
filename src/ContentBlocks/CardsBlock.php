@@ -2,9 +2,9 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\ContentBlocks;
 
+use Filament\Schemas\Components\Grid;
+use Filament\Actions\Action;
 use Closure;
-use Filament\Forms\Components\Actions\Action;
-use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;

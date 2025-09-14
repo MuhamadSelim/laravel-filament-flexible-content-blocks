@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\FlexiblePageResource\Pages;
 
+use Filament\Actions\CreateAction;
 use App\Filament\Resources\PageResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
@@ -13,7 +14,7 @@ class ListPages extends ListRecords
     protected function getActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            CreateAction::make(),
         ];
     }
 }

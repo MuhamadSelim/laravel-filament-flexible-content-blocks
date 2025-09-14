@@ -2,10 +2,10 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\Blocks;
 
+use Filament\Schemas\Components\Utilities\Get;
 use Closure;
 use Filament\Forms\Components\Concerns\CanBeValidated;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Get;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Validator;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;

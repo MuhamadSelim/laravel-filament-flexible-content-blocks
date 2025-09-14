@@ -2,16 +2,16 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\Blocks;
 
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Closure;
-use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Concerns\CanAllowHtml;
 use Filament\Forms\Components\Concerns\CanBePreloaded;
 use Filament\Forms\Components\Concerns\CanBeSearchable;
 use Filament\Forms\Components\Concerns\HasLoadingMessage;
 use Filament\Forms\Components\Concerns\HasName;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Str;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\Blocks\Type\OverviewType;
@@ -24,7 +24,7 @@ class OverviewItemField extends Component
     use HasLoadingMessage;
     use HasName;
 
-    protected string $view = 'filament-forms::components.grid';
+    protected string $view = 'filament-schemas::components.grid';
 
     public bool|Closure $isRequired = false;
 

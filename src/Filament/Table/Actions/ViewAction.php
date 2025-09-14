@@ -2,8 +2,8 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Table\Actions;
 
+use Filament\Actions\Action;
 use Filament\Resources\Pages\Page;
-use Filament\Tables\Actions\Action;
 use Statikbe\FilamentFlexibleContentBlocks\Models\Contracts\Linkable;
 
 class ViewAction extends Action

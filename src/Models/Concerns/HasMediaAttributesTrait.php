@@ -2,6 +2,7 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Models\Concerns;
 
+use Spatie\Image\Exceptions\InvalidManipulation;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\HtmlableMedia;
@@ -18,7 +19,7 @@ trait HasMediaAttributesTrait
      * Sets the default media conversion for the Filament upload field.
      *
      *
-     * @throws \Spatie\Image\Exceptions\InvalidManipulation
+     * @throws InvalidManipulation
      */
     public function addFilamentThumbnailMediaConversion(): void
     {

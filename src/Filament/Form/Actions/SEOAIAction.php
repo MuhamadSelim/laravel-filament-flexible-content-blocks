@@ -2,8 +2,9 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Actions;
 
-use Filament\Forms\Components\Actions\Action;
-use Filament\Forms\Set;
+use Filament\Actions\Action;
+use Filament\Schemas\Components\Utilities\Set;
+use Throwable;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
@@ -69,7 +70,7 @@ class SEOAIAction extends Action
                     ->danger()
                     ->send();
             }
-        } catch (\Throwable $t) {
+        } catch (Throwable $t) {
             Log::error($t);
             Notification::make()
                 ->title(trans('filament-flexible-content-blocks::filament-flexible-content-blocks.generated_error'))

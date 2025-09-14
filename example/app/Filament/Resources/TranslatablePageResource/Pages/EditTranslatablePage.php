@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources\TranslatablePageResource\Pages;
 
+use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
+use Filament\Actions\DeleteAction;
 use App\Filament\Resources\TranslatablePageResource;
 use Filament\Actions;
-use Filament\Actions\LocaleSwitcher;
 use Filament\Resources\Pages\EditRecord;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Pages\EditRecord\Concerns\TranslatableWithMedia;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Resource\Pages\Actions\CopyContentBlocksToLocalesAction;
@@ -20,7 +21,7 @@ class EditTranslatablePage extends EditRecord
         return [
             CopyContentBlocksToLocalesAction::make(),
             LocaleSwitcher::make(),
-            Actions\DeleteAction::make(),
+            DeleteAction::make(),
         ];
     }
 }

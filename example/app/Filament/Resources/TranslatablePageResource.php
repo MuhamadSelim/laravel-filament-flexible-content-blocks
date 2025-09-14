@@ -2,12 +2,17 @@
 
 namespace App\Filament\Resources;
 
+use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
+use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Components\Tabs\Tab;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteBulkAction;
+use App\Filament\Resources\TranslatablePageResource\Pages\ListTranslatablePages;
+use App\Filament\Resources\TranslatablePageResource\Pages\CreateTranslatablePage;
+use App\Filament\Resources\TranslatablePageResource\Pages\EditTranslatablePage;
 use App\Filament\Resources\TranslatablePageResource\Pages;
 use App\Models\TranslatablePage;
-use Filament\Forms\Components\Tabs;
-use Filament\Forms\Components\Tabs\Tab;
-use Filament\Forms\Form;
-use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -35,12 +40,12 @@ class TranslatablePageResource extends Resource
 
     protected static ?string $model = TranslatablePage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-globe-europe-africa';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-globe-europe-africa';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
+        return $schema
+            ->components([
                 Tabs::make('Heading')
                     ->columnSpan(2)
                     ->tabs([
@@ -83,13 +88,13 @@ class TranslatablePageResource extends Resource
             ->filters([
                 PublishedFilter::create(),
             ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
+            ->recordActions([
+                EditAction::make(),
                 PublishAction::make(),
                 ViewAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+            ->toolbarActions([
+                DeleteBulkAction::make(),
             ]);
     }
 
@@ -103,9 +108,9 @@ class TranslatablePageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTranslatablePages::route('/'),
-            'create' => Pages\CreateTranslatablePage::route('/create'),
-            'edit' => Pages\EditTranslatablePage::route('/{record}/edit'),
+            'index' => ListTranslatablePages::route('/'),
+            'create' => CreateTranslatablePage::route('/create'),
+            'edit' => EditTranslatablePage::route('/{record}/edit'),
         ];
     }
 }
