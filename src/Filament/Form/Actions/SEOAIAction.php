@@ -3,9 +3,8 @@
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Actions;
 
 use Filament\Actions\Action;
-use Filament\Schemas\Components\Utilities\Set;
-use Throwable;
 use Filament\Notifications\Notification;
+use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use OpenAI\Laravel\Facades\OpenAI;
@@ -14,6 +13,7 @@ use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\SEOKeywordsField
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\SEOTitleField;
 use Statikbe\FilamentFlexibleContentBlocks\Models\Contracts\HasContentBlocks;
 use Statikbe\FilamentFlexibleContentBlocks\Models\Contracts\HasPageAttributes;
+use Throwable;
 
 class SEOAIAction extends Action
 {

@@ -2,9 +2,9 @@
 
 namespace Statikbe\FilamentFlexibleContentBlocks\ContentBlocks;
 
-use Illuminate\Contracts\View\View;
 use Closure;
 use Filament\Forms\Components\Builder\Block;
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use Spatie\MediaLibrary\HasMedia;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Builder\ContentBlockWithPreview;

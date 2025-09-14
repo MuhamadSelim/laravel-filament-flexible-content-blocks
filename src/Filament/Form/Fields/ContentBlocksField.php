@@ -3,10 +3,10 @@
 namespace Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields;
 
 use Filament\Actions\Action;
-use Filament\Support\Enums\Width;
-use Filament\Schemas\Schema;
 use Filament\Forms\Components\Builder;
 use Filament\Resources\Pages\Page;
+use Filament\Schemas\Schema;
+use Filament\Support\Enums\Width;
 use Livewire\Component as Livewire;
 use Statikbe\FilamentFlexibleContentBlocks\FilamentFlexibleBlocksConfig;
 

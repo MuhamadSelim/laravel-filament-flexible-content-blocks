@@ -2,20 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Tabs;
-use Filament\Schemas\Components\Tabs\Tab;
-use Filament\Actions\EditAction;
-use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\TranslatablePageResource\Pages\ListTranslatablePages;
 use App\Filament\Resources\TranslatablePageResource\Pages\CreateTranslatablePage;
 use App\Filament\Resources\TranslatablePageResource\Pages\EditTranslatablePage;
-use App\Filament\Resources\TranslatablePageResource\Pages;
+use App\Filament\Resources\TranslatablePageResource\Pages\ListTranslatablePages;
 use App\Models\TranslatablePage;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Components\Tabs\Tab;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
+use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Actions\CopyContentBlocksToLocalesAction;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\AuthorField;
 use Statikbe\FilamentFlexibleContentBlocks\Filament\Form\Fields\CodeField;
@@ -40,7 +38,7 @@ class TranslatablePageResource extends Resource
 
     protected static ?string $model = TranslatablePage::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-globe-europe-africa';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-globe-europe-africa';
 
     public static function form(Schema $schema): Schema
     {
